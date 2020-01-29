@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [unify_qa_testcases.LoginpageTest]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="unify_qa_testcases.LoginpageTest">
+        <methods>
+          <include name="loginTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- unify_qa_testcases.LoginpageTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [unify_qa_testcases.LoginpageTest] -->
