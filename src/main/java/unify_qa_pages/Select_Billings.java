@@ -15,10 +15,10 @@ public class Select_Billings extends Testbase{
 	public Select_Billings() {
 		PageFactory.initElements(driver, this);
 	}
-	public Add_charges clickOnBillings() {
-		billings.click();
-		return new Add_charges();
-	}
+	/*
+	 * public Add_charges clickOnBillings() { billings.click(); return new
+	 * Add_charges(); }
+	 */
 	
 	public Add_charges clickOnCharges() {
 		Actions action = new Actions(driver);

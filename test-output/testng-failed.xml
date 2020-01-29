@@ -5,7 +5,6 @@
     <classes>
       <class name="unify_qa_testcases.Org_createpageTest">
         <methods>
-          <include name="create_org" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- unify_qa_testcases.Org_createpageTest -->

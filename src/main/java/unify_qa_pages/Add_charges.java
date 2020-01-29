@@ -1,5 +1,7 @@
 package unify_qa_pages;
 
-public class Add_charges {
+import unify_qa_base.Testbase;
+
+public class Add_charges extends Testbase{
 
 }

@@ -8,10 +8,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import unify_qa_base.Testbase;
+import unify_qa_pages.Add_charges;
 import unify_qa_pages.Homepage;
 import unify_qa_pages.Loginpage;
 import unify_qa_pages.Org_Contactspage;
 import unify_qa_pages.Org_Createpage;
+import unify_qa_pages.Select_Billings;
 import unify_qa_util.Testutil;
 
 public class Org_createpageTest extends Testbase {
@@ -21,42 +23,46 @@ public class Org_createpageTest extends Testbase {
 	Org_Createpage org_createpage;
 	String sheetName = "Sheet3";
 	Testutil testutil;
+	Select_Billings billing_module;
+	Add_charges addCharges;
 
 	public Org_createpageTest() {
 		super();
 
 	}
 
-	@BeforeMethod
+	@Test
 	public void setUp() throws InterruptedException {
 
 		initialization();
 		testutil = new Testutil();
-		org_createpage = new Org_Createpage();
+		// org_createpage = new Org_Createpage();
 
-		org_contactspage = new Org_Contactspage();
+		// org_contactspage = new Org_Contactspage();
 		loginpage = new Loginpage();
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"),
 				prop.getProperty("domain"));
+		//billing_module.clickOnBillings();
+		addCharges = billing_module.clickOnCharges();
+		// org_contactspage = homepage.clickonCustomers();
+		// org_createpage.switchingWindow();
 
-		org_contactspage = homepage.clickonCustomers();
-		org_createpage.switchingWindow();
 		// org_createpage.switchToFrame();
+		driver.quit();
 	}
 
-	@DataProvider
-	public Object[][] getorg_TestData() {
-		Object data[][] = Testutil.getTestData(sheetName);
-		return data;
-	}
-
+	/*
+	 * @DataProvider public Object[][] getorg_TestData() { Object data[][] =
+	 * Testutil.getTestData(sheetName); return data; }
+	 */
+/*
 	@Test(priority = 1, dataProvider = "getorg_TestData")
 	public void create_org(String domain, String orgName, String shortName, String country, String city, String lbook)
 			throws Exception {
 
-		//org_contactspage.createOrg();
+		// org_contactspage.createOrg();
 
-		/*
+		
 		 * org_createpage.createNewContact(domain, orgName, shortName);
 		 * org_createpage.selectCountry(country); org_createpage.selectcity(city);
 		 * org_createpage.linktoLedger();
@@ -65,16 +71,16 @@ public class Org_createpageTest extends Testbase {
 		 * org_createpage.addLedgerbook(lbook); org_createpage.clickonFinishbtn();
 		 * org_createpage.shiptoaddress(); testutil.screenshot("Org_created");
 		 * Thread.sleep(3000);
-		 */
+		 
 
-	org_createpage.searchOrg(orgName);
+		// org_createpage.searchOrg(orgName);
 		// driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-		Thread.sleep(5000);
-		testutil.screenshot("Org_searched");
+		// Thread.sleep(5000);
+		// testutil.screenshot("Org_searched");
 		Thread.sleep(5000);
 
 		driver.quit();
-	}
-
+	}*/
+	
 }
